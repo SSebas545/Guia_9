@@ -12,9 +12,9 @@ printf("La potencia es 1\n");
 }
 else
 {
-res = 1;/*La correccion es que al inicializar res = y, se multiplicaba y * y una vez extra a la que deberia,
-        ademas de que si x = 1 en vez del resultado ser igual a y, era y*y, al inicializar en 1 se arregla.*/
-for (i = 0; i < x; i++)
+res = y;
+for (i = 1; i < x; i++)//La correcion es que i empezaba en 0, por lo cual, se multiplicaba una vez de mas, al inicializar i = 1 se arregla este problema.
+
 {
 res = res * y;
 }
