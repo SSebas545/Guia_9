@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+int res, x, y, i;
+printf("dame y\n");
+scanf("%d", &y);
+printf("dame x\n");
+scanf("%d", &x);
+if (x == 0)
+{
+printf("La potencia es 1\n");
+}
+else
+{
+res = 1;/*La correccion es que al inicializar res = y, se multiplicaba y * y una vez extra a la que deberia,
+        ademas de que si x = 1 en vez del resultado ser igual a y, era y*y, al inicializar en 1 se arregla.*/
+for (i = 0; i < x; i++)
+{
+res = res * y;
+}
+printf("La potencia es %d\n", res);
+}
+return 0;
+}

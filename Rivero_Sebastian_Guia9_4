@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int num, cant = 0, mayor, menor;
+    float suma = 0;
+
+    printf("Ingrese numeros positivos (0 para terminar)\n");
+
+    do
+    {
+        scanf("%d", &num);
+        if(num > 0)
+        {
+            if(cant == 0)
+            {
+                mayor = menor = num;
+            }
+            if(num > mayor) mayor = num;
+            if(num < menor) menor = num;
+            suma += num;
+            cant++;
+        }
+    } while(num != 0);
+
+    if(cant > 0)
+    {
+        printf("Cantidad: %d\n", cant);
+        printf("Mayor: %d\n", mayor);
+        printf("Menor: %d\n", menor);
+        printf("Media: %.2f\n", suma/cant);
+    }
+
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, i, suma;
+
+    do
+    {
+        printf("Ingrese el primer numero\n");
+        scanf("%d", &a);
+        printf("Ingrese el segundo numero\n");
+        scanf("%d", &b);
+    } while(a >= b);
+
+    suma = 0;
+    for(i = a; i <= b; i++)
+    {
+        suma += i;
+    }
+
+    printf("La suma es %d\n", suma);
+
+    return 0;
+}
