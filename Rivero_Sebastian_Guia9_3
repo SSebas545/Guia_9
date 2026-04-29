@@ -23,7 +23,7 @@ int main()
 
     } while(opcion == 'S' || opcion == 's');
 
-    printf("Gracias por usar nuestro programa\n");
+    printf("Gracias por usar este programa\n");
 
     return 0;
 }
